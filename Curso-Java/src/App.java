@@ -6,5 +6,7 @@ public class App {
         int y = 5;
 
         int result = x * y;
+
+        System.out.println(result);
     }
 }
