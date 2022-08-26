@@ -1,69 +1,106 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-//import java.util.Scanner;
+import javax.xml.validation.Validator;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-
-     //   %f = ponto flutuante
-     //   %d = inteiro
-     //   %s = texto
-     //   %n = quebra de linha
-
-      String nome = "Maria";
-      int idade = 31;
-      double renda = 4000.0;
-      System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda);
-
-      Scanner sc = new Scanner(System.in);
-      String s1, s2, s3;
-      s1 = sc.nextLine();
-      s2 = sc.nextLine();
-      s3 = sc.nextLine();
-      System.out.println("DADOS DIGITADOS:");
-      System.out.println(s1);
-      System.out.println(s2);
-      System.out.println(s3);
-      sc.close();
-
-      var util = new Util();
-
-       util.setAltura(15);
-       util.setBaseA(15);
-       util.setBaseB(15);
-
-        System.out.printf("Calculo Aárea %f", util.CalculoAreaTrapezio());
-
-
         Locale.setDefault(Locale.US);
+        // ------------Exercício 1---------------
+        int a, b, result;
 
         Scanner scanner = new Scanner(System.in);
 
-        double x;
+        System.out.println("Digite o primeiro valor a ser somado!");
+        a = scanner.nextInt();
+        System.out.println("Digite o segundo valor a ser somado!");
+        b = scanner.nextInt();
+        result = a + b;
+        System.out.println("SOMA = " + result);
 
-        x = scanner.nextDouble();
+        // ------------Exercício 2---------------
 
-        System.out.printf("Você digitou: %.2f%n", x);
+        double raio, pi, area;
 
-        char _char;
+        pi = 3.14159;
 
-        _char = scanner.next().charAt(0);
+        System.out.println("Digite o raio!");
 
-        System.out.println("Você digitou: " + _char);
+        raio = scanner.nextDouble();
 
+        area = pi * Math.pow(raio, 2.0);
 
-        // para ler varios dados na mesma linha utulizar 
+        System.out.printf("A = %.4f%n", area);
 
+        // ------------Exercício 3---------------
 
-       String a;
-       int b;
-       double c;
+        System.out.println("Digite os 4 números entre espaço!");
 
-       a = scanner.next();
-       b = scanner.nextInt();
-       c = scanner.nextDouble();
+        int A, B, C, D, dif;
 
+        A = scanner.nextInt();
+        B = scanner.nextInt();
+        C = scanner.nextInt();
+        D = scanner.nextInt();
+
+        dif = (A * B - C * D);
+
+        System.out.println("DIFERENCA = " + dif);
+
+        // ------------Exercício 4---------------
+
+        double number, hour, hourValue, salary;
+
+        number = scanner.nextDouble();
+        hour = scanner.nextDouble();
+        hourValue = scanner.nextDouble();
+        salary = hour * hourValue;
+
+        System.out.printf("NUMBER %.0f%nU$ %.2f%n", number, salary);
+
+        // ------------Exercício 5---------------
+
+        int code, quantity;
+        double unitValue, total;
+
+        code = scanner.nextInt();
+        quantity = scanner.nextInt();
+        unitValue = scanner.nextDouble();
+
+        total = quantity * unitValue;
+
+        scanner.nextLine();
+
+        code = scanner.nextInt();
+        quantity = scanner.nextInt();
+        unitValue = scanner.nextDouble();
+
+        total += (quantity * unitValue);
+
+        System.out.printf("VALOR A PAGAR: R$ %.2f%n", total);
+
+        // ------------Exercício 5---------------
+        double AA,BB, CC, altura, base, largura, r, triangulo, circulo, trapezio, quadrado, retangulo;
+
+        AA = (double)scanner.nextDouble();
+        BB = (double)scanner.nextDouble();
+        CC = (double)scanner.nextDouble();
+
+        base = AA;
+        altura = CC;
+        largura = BB;
+        r = altura;
+
+        retangulo = base * largura;
+        triangulo = base * altura / 2;
+        trapezio = (base + largura) * altura / 2;
+        quadrado = Math.pow(largura, 2.0);
+        circulo = 3.14159f * Math.pow(r, 2.0);
+
+        System.out.printf(" TRIANGULO: %.3f%n CIRCULO: %.3f%n TRAPEZIO: %.3f%n QUADRADO %.3f%n RETANGULO %.3f%n",
+                triangulo, circulo, trapezio, quadrado, retangulo);
+
+        scanner.close();
 
     }
 }
