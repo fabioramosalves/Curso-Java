@@ -5,7 +5,6 @@ public class Main {
 
       /*
        * Estrutura condicional
-       * 
        */
 
       System.out.println("Quantas Horas?");
@@ -14,19 +13,17 @@ public class Main {
       Scanner sc = new Scanner(System.in);
       hrs = sc.nextInt();
 
-      if (hrs < 0 || hrs > 24)
+      if (hrs < 0 || hrs > 24) {
          System.out.println("Dado inválido!");
-      else {
-         if (hrs < 12) {
-            System.out.println("Bom dia!");
-         } else {
-            if (hrs < 18)
-               System.out.println("Boa tarde!");
-            else
-               System.out.println("Boa noite!");
-         }
+      } else if (hrs < 12) {
+         System.out.println("Bom dia!");
+      } else if (hrs < 18) {
+         System.out.println("Boa tarde!");
+      } else {
+         System.out.println("Boa noite!");
       }
 
       sc.close();
+
    }
 }
