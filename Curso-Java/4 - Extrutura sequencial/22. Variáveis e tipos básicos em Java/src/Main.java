@@ -1,69 +1,40 @@
-import java.util.Locale;
-import java.util.Scanner;
-
-//import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) throws Exception {
 
-     //   %f = ponto flutuante
-     //   %d = inteiro
-     //   %s = texto
-     //   %n = quebra de linha
+        // variáveis
 
-      String nome = "Maria";
-      int idade = 31;
-      double renda = 4000.0;
-      System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda);
+        // <tipo> <nome> = <valor inicial>
 
-      Scanner sc = new Scanner(System.in);
-      String s1, s2, s3;
-      s1 = sc.nextLine();
-      s2 = sc.nextLine();
-      s3 = sc.nextLine();
-      System.out.println("DADOS DIGITADOS:");
-      System.out.println(s1);
-      System.out.println(s2);
-      System.out.println(s3);
-      sc.close();
-
-      var util = new Util();
-
-       util.setAltura(15);
-       util.setBaseA(15);
-       util.setBaseB(15);
-
-        System.out.printf("Calculo Aárea %f", util.CalculoAreaTrapezio());
+        int idade = 25;
+        double altura = 1.68;
+        char sexo = 'M';
 
 
-        Locale.setDefault(Locale.US);
+        System.out.println("Idade: " + idade );
+        System.out.println("Altura: " + altura );
+        System.out.println("Sexo: " + sexo );
 
-        Scanner scanner = new Scanner(System.in);
+        // Uma variável possui:
 
-        double x;
+        // Nome, Tipo, Valor e Endereço (qual local da ram ela está)
 
-        x = scanner.nextDouble();
+        // Tipos Primitivos
 
-        System.out.printf("Você digitou: %.2f%n", x);
+        // ----------Inteiros--------------
+        // byte = 8 bits
+        // short = 16 bits
+        // int = 32 bits
+        // long = 64 bits
 
-        char _char;
+        // ---------Numéricos com ponto flutuante--------
+        // float = 32 bits
+        // double = 64 bits
 
-        _char = scanner.next().charAt(0);
+        //-------------Um caractere Unicode---------------
+        // char = 16 bits
 
-        System.out.println("Você digitou: " + _char);
-
-
-        // para ler varios dados na mesma linha utulizar 
-
-
-       String a;
-       int b;
-       double c;
-
-       a = scanner.next();
-       b = scanner.nextInt();
-       c = scanner.nextDouble();
-
+        //-------------Valor verdade-----------
+        // boolean 1 bit
 
     }
 }
