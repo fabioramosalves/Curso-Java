@@ -1,8 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-import javax.xml.validation.Validator;
-
 public class Main {
     public static void main(String[] args) throws Exception {
         Locale.setDefault(Locale.US);
@@ -60,10 +58,10 @@ public class Main {
 
         // ------------Exercício 5---------------
 
-        int code, quantity;
+        int quantity;
         double unitValue, total;
 
-        code = scanner.nextInt();
+        scanner.nextInt();
         quantity = scanner.nextInt();
         unitValue = scanner.nextDouble();
 
@@ -71,7 +69,7 @@ public class Main {
 
         scanner.nextLine();
 
-        code = scanner.nextInt();
+        scanner.nextInt();
         quantity = scanner.nextInt();
         unitValue = scanner.nextDouble();
 
