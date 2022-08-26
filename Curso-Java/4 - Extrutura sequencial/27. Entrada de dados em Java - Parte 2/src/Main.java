@@ -17,6 +17,7 @@ public class Main {
 
         System.out.println("Dados Digitados:");
 
+        System.out.println(x);
         System.out.println(s1);
         System.out.println(s2);
         System.out.println(s3);
