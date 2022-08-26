@@ -1,69 +1,57 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-//import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) throws Exception {
 
-     //   %f = ponto flutuante
-     //   %d = inteiro
-     //   %s = texto
-     //   %n = quebra de linha
+    // Para fazer entrada de dados, nós vamos criar uma objeto do tipo
+    //Scanner da seguinte forma:
 
-      String nome = "Maria";
-      int idade = 31;
-      double renda = 4000.0;
-      System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda);
+    Scanner sc = new Scanner(System.in);
 
-      Scanner sc = new Scanner(System.in);
-      String s1, s2, s3;
-      s1 = sc.nextLine();
-      s2 = sc.nextLine();
-      s3 = sc.nextLine();
-      System.out.println("DADOS DIGITADOS:");
-      System.out.println(s1);
-      System.out.println(s2);
-      System.out.println(s3);
-      sc.close();
+    // para ler uma palavra (texto sem espaços)
 
-      var util = new Util();
+    System.out.println("Digite um valor:");
+    String result = sc.nextLine();
 
-       util.setAltura(15);
-       util.setBaseA(15);
-       util.setBaseB(15);
+    System.out.println("Você digitou: " + result);
+     
+    // entrada com ponto flutuante
 
-        System.out.printf("Calculo Aárea %f", util.CalculoAreaTrapezio());
+    Locale.setDefault(Locale.US);
 
+    System.out.println("Digite um valor:");
+    double resultDouble = sc.nextDouble();
 
-        Locale.setDefault(Locale.US);
+    System.out.println("Você digitou double: " + resultDouble);
 
-        Scanner scanner = new Scanner(System.in);
+    System.out.printf("Você digitou double: %.2f%n ", resultDouble);
 
-        double x;
+    //lendo caracter
 
-        x = scanner.nextDouble();
+    char cha;
 
-        System.out.printf("Você digitou: %.2f%n", x);
-
-        char _char;
-
-        _char = scanner.next().charAt(0);
-
-        System.out.println("Você digitou: " + _char);
+    cha = sc.next().charAt(0);
+    System.out.println("Você digitou char: "+ cha);
 
 
-        // para ler varios dados na mesma linha utulizar 
+     // para ler varios dados na mesma linha utulizar 
 
 
-       String a;
-       int b;
-       double c;
+     String a;
+     int b;
+     double c;
 
-       a = scanner.next();
-       b = scanner.nextInt();
-       c = scanner.nextDouble();
+     a = sc.next();
+     b = sc.nextInt();
+     c = sc.nextDouble();
 
+     System.out.println("Dados digitados:");
+     System.out.println(a);
+     System.out.println(b);
+     System.out.println(c);
+
+    sc.close();
 
     }
 }
