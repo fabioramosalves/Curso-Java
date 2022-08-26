@@ -1,69 +1,33 @@
-import java.util.Locale;
-import java.util.Scanner;
-
-//import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) throws Exception {
 
-     //   %f = ponto flutuante
-     //   %d = inteiro
-     //   %s = texto
-     //   %n = quebra de linha
+        // Funções matemáticas em Java
 
-      String nome = "Maria";
-      int idade = 31;
-      double renda = 4000.0;
-      System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda);
+        double x = 3.0;
+        double y = 4.0;
+        double z = -5.0;
+        double A, B, C;
 
-      Scanner sc = new Scanner(System.in);
-      String s1, s2, s3;
-      s1 = sc.nextLine();
-      s2 = sc.nextLine();
-      s3 = sc.nextLine();
-      System.out.println("DADOS DIGITADOS:");
-      System.out.println(s1);
-      System.out.println(s2);
-      System.out.println(s3);
-      sc.close();
+        A = Math.sqrt(x);
+        B = Math.sqrt(y);
+        C = Math.sqrt(25.0);
 
-      var util = new Util();
+        System.out.println("Raiz quadrada de " + x + " = " + A);
+        System.out.println("Raiz quadrada de " + y + " = " + B);
+        System.out.println("Raiz quadrada de 25 = " + C);
 
-       util.setAltura(15);
-       util.setBaseA(15);
-       util.setBaseB(15);
+        A = Math.pow(x, y);
+        B = Math.pow(y, 2.0);
+        C = Math.pow(5.0, 2.0);
 
-        System.out.printf("Calculo Aárea %f", util.CalculoAreaTrapezio());
+        System.out.println(x + " Elevado a " + y + " potência = " + A);
+        System.out.println(y + " Elevado ao quadrado = " + B);
+        System.out.println("5 Elevado ao quadrado = " + C);
 
+        A = Math.abs(y);
+        B = Math.abs(z);
 
-        Locale.setDefault(Locale.US);
-
-        Scanner scanner = new Scanner(System.in);
-
-        double x;
-
-        x = scanner.nextDouble();
-
-        System.out.printf("Você digitou: %.2f%n", x);
-
-        char _char;
-
-        _char = scanner.next().charAt(0);
-
-        System.out.println("Você digitou: " + _char);
-
-
-        // para ler varios dados na mesma linha utulizar 
-
-
-       String a;
-       int b;
-       double c;
-
-       a = scanner.next();
-       b = scanner.nextInt();
-       c = scanner.nextDouble();
-
-
+        System.out.println("Valor absoluto de " + y + " = " + A);
+        System.out.println("Valor absoluto de " + z + " = " + B);
     }
 }
