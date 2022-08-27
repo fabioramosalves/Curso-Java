@@ -69,6 +69,24 @@ public class Main {
         System.out.printf("Total: R$ %.2f%n", value * quantity);
 
         // exercicio 6
+        
+        double intervalo;
+        String valor;
+        Locale.setDefault(Locale.US);
+        intervalo = scanner.nextDouble();
+
+        if (intervalo < 0 || intervalo > 100) {
+            valor = "Fora de intervalo";
+        } else if (intervalo == 0 && intervalo <= 25) {
+            valor = "([0,25]";
+        } else if (intervalo > 25 && intervalo <= 50) {
+            valor = "(25,50]";
+        } else if (intervalo > 50 && intervalo <= 75) {
+            valor = "([50,75]";
+        } else
+            valor = "([75,100]";
+
+        System.out.println("Intervalo " + valor);
 
         scanner.close();
 
