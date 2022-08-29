@@ -2,93 +2,118 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+       public static void main(String[] args) throws Exception {
 
-        System.out.println("Informe um número!");
+              System.out.println("Informe um número!");
 
-        Scanner scanner = new Scanner(System.in);
+              Scanner scanner = new Scanner(System.in);
 
-        int number = scanner.nextInt();
+              int number = scanner.nextInt();
 
-        // exercicio 1
-        System.out.println(number < 0 ? "NEGATIVO" : "NÃO NEGATIVO");
+              // exercicio 1
+              System.out.println(number < 0 ? "NEGATIVO" : "NÃO NEGATIVO");
 
-        // exercicio 2
-        System.out.println(number % 2 == 0 ? "Par" : "Impar");
+              // exercicio 2
+              System.out.println(number % 2 == 0 ? "Par" : "Impar");
 
-        // exercicio 3
-        System.out.println("Informe os numeros!");
-        int number1, number2;
+              // exercicio 3
+              System.out.println("Informe os numeros!");
+              int number1, number2;
 
-        number1 = scanner.nextInt();
-        number2 = scanner.nextInt();
+              number1 = scanner.nextInt();
+              number2 = scanner.nextInt();
 
-        System.out.println((number1 % number2 == 0 || number2 % number1 == 0) ? "Sao Multiplos" : "Nao sao Multiplos");
+              System.out.println(
+                            (number1 % number2 == 0 || number2 % number1 == 0) ? "Sao Multiplos" : "Nao sao Multiplos");
 
-        // exercicio 4
+              // exercicio 4
 
-        int start, finaly, duration;
+              int start, finaly, duration;
 
-        start = scanner.nextInt();
-        finaly = scanner.nextInt();
+              start = scanner.nextInt();
+              finaly = scanner.nextInt();
 
-        duration = 0;
+              duration = 0;
 
-        if (start < finaly)
-            duration = finaly - start;
-        else
-            duration = 24 - start + finaly;
+              if (start < finaly)
+                     duration = finaly - start;
+              else
+                     duration = 24 - start + finaly;
 
-        System.out.println("O JOGO DUROU " + duration + " HORA(S)");
+              System.out.println("O JOGO DUROU " + duration + " HORA(S)");
 
-        // exercicio 5
+              // exercicio 5
 
-        Locale.setDefault(Locale.US);
+              Locale.setDefault(Locale.US);
 
-        int quantity, code;
+              int quantity, code;
 
-        double value;
+              double value;
 
-        code = scanner.nextInt();
-        quantity = scanner.nextInt();
+              code = scanner.nextInt();
+              quantity = scanner.nextInt();
 
-        value = 0f;
+              value = 0f;
 
-        if (code == 1) {
-            value = 4.0;
-        } else if (code == 2) {
-            value = 4.5;
-        } else if (code == 3) {
-            value = 5.0;
-        } else if (code == 4) {
-            value = 2.0;
-        } else {
-            value = 1.5;
-        }
+              if (code == 1) {
+                     value = 4.0;
+              } else if (code == 2) {
+                     value = 4.5;
+              } else if (code == 3) {
+                     value = 5.0;
+              } else if (code == 4) {
+                     value = 2.0;
+              } else {
+                     value = 1.5;
+              }
 
-        System.out.printf("Total: R$ %.2f%n", value * quantity);
+              System.out.printf("Total: R$ %.2f%n", value * quantity);
 
-        // exercicio 6
-        
-        double intervalo;
-        String valor;
-        Locale.setDefault(Locale.US);
-        intervalo = scanner.nextDouble();
+              // exercicio 6
 
-        if (intervalo < 0 || intervalo > 100) {
-            valor = "Fora de intervalo";
-        } else if (intervalo == 0 && intervalo <= 25) {
-            valor = "([0,25]";
-        } else if (intervalo > 25 && intervalo <= 50) {
-            valor = "(25,50]";
-        } else if (intervalo > 50 && intervalo <= 75) {
-            valor = "([50,75]";
-        } else
-            valor = "([75,100]";
+              double intervalo;
+              String valor;
+              Locale.setDefault(Locale.US);
+              intervalo = scanner.nextDouble();
 
-        System.out.println("Intervalo " + valor);
+              if (intervalo < 0 || intervalo > 100) {
+                     valor = "Fora de intervalo";
+              } else if (intervalo == 0 && intervalo <= 25) {
+                     valor = "([0,25]";
+              } else if (intervalo > 25 && intervalo <= 50) {
+                     valor = "(25,50]";
+              } else if (intervalo > 50 && intervalo <= 75) {
+                     valor = "([50,75]";
+              } else
+                     valor = "([75,100]";
 
-        scanner.close();
+              System.out.println("Intervalo " + valor);
+              // exercicio 7
 
-    }
+              double x, y;
+              String q;
+
+              x = scanner.nextDouble();
+              y = scanner.nextDouble();
+
+              q = "";
+
+              if (x == 0 && y == 0)
+                     q = "Origem";
+              if (x == 0)
+                     q = "Eixo Y";
+              if (y == 0)
+                     q = "Eixo X";
+              else if (x >= 0 && y >= 0)
+                     q = "Q1";
+              else if (x < 0 && y <= 0)
+                     q = "Q2";
+              else if (x < 0 && y < 0)
+                     q = "Q3";
+              else if (x >= 0 && y < 0)
+                     q = "Q4";
+
+              System.out.println(q);
+              scanner.close();
+       }
 }
