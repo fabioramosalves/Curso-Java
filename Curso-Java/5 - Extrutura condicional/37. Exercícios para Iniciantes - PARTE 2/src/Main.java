@@ -100,9 +100,9 @@ public class Main {
 
               if (x == 0 && y == 0)
                      q = "Origem";
-              if (x == 0)
+              else if (x == 0)
                      q = "Eixo Y";
-              if (y == 0)
+              else if (y == 0)
                      q = "Eixo X";
               else if (x >= 0 && y >= 0)
                      q = "Q1";
