@@ -20,7 +20,7 @@ public class Main {
     double conta = 50.0;
 
     if(minutes > 100){
-       conta = conta + (minutes-100) * 2.0;
+       conta += (minutes-100) * 2.0;
     }
 
     System.out.printf("Valor da conta =  RS %.2f%n", conta);
