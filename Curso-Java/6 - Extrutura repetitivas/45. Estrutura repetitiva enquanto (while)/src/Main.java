@@ -10,11 +10,9 @@ public class Main {
      int value = 0;
 
      while(number != 0){
-
         value += number;
         System.out.println("Digite um número!");
         number = scanner.nextInt();
- 
      }
 
      System.out.println(value);
