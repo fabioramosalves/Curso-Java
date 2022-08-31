@@ -22,7 +22,13 @@ public class Product {
             throw new Exception("not found product in stock!");
     }
 
-    public String toString(){
-       return name + ", " + price + ", " + quantity + ", " +totalValueInStock();
+    public String toString() {
+        return "Name: "
+                + name
+                + ", Price: "
+                + String.format("%.2f", price)
+                + ", Quantity: "
+                + quantity + ", Total Value: "
+                + totalValueInStock();
     }
 }
