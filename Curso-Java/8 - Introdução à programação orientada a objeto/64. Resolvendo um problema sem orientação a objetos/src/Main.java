@@ -32,7 +32,6 @@ public class Main {
         MaxArea(areaX, areaY);
 
         scanner.close();
-
     }
 
     public static void MaxArea(double x, double y) {
