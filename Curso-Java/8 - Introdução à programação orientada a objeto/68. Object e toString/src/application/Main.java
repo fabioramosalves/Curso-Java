@@ -1,4 +1,5 @@
 package application;
+
 import java.util.Locale;
 import java.util.Scanner;
 import entities.Product;
@@ -21,8 +22,10 @@ public class Main {
         System.out.println("Quantity in Stock ");
         product.quantity = scanner.nextInt();
 
-        System.out.println(product.name + ", " + product.price + ", " + product.quantity + ", " +product.totalValueInStock());
-        scanner.close();
+        System.out.println(product.toString());
+        // System.out.println(product); //implicitamento pode retornar apenas com
+        // product sem o product.toString()
 
+        scanner.close();
     }
 }

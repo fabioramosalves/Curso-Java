@@ -21,4 +21,8 @@ public class Product {
         else
             throw new Exception("not found product in stock!");
     }
+
+    public String toString(){
+       return name + ", " + price + ", " + quantity + ", " +totalValueInStock();
+    }
 }
