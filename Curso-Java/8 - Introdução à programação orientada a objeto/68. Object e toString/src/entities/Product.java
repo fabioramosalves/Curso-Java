@@ -26,9 +26,9 @@ public class Product {
         return "Name: "
                 + name
                 + ", Price: "
-                + String.format("%.2f", price)
-                + ", Quantity: "
+                + String.format("%.2f", price) 
+                + ", Quantity: " 
                 + quantity + ", Total Value: "
-                + totalValueInStock();
+                + String.format("%.2f", totalValueInStock());
     }
 }
