@@ -19,12 +19,12 @@ public class Main {
         int b = scanner.nextInt();
         int c = scanner.nextInt();
 
-        showResult( MajorThreeNumbers(a, b, c));
+        showResult(MaxNumbers(a, b, c));
 
         scanner.close();
     }
 
-    public static int MajorThreeNumbers(int a, int b, int c) {
+    public static int MaxNumbers(int a, int b, int c) {
         int aux;
         if (a > b && a > c)
             aux = a;
@@ -36,7 +36,7 @@ public class Main {
         return aux;
     }
 
-    public static void showResult(int value){
+    public static void showResult(int value) {
         System.out.println("Higher = " + value);
     }
 }
