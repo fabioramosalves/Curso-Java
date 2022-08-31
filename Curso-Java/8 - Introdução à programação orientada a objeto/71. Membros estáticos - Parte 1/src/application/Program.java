@@ -3,6 +3,8 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import util.Calculator;
+
 public class Program {
 
     public static void main(String[] args) {
@@ -10,13 +12,15 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
 
+        Calculator calculator = new Calculator();
+
         System.out.println("Enter radius: ");
 
         double radius = scanner.nextDouble();
 
-        double circumference = circumference(radius);
+        double circumference = calculator.circumference(radius);
 
-        double volume = volume(radius);
+        double volume = calculator.volume(radius);
 
         System.out.printf("Circunferência: %.2f%n", circumference);
         System.out.printf("Volume: %.2f%n", volume);
@@ -26,11 +30,5 @@ public class Program {
 
     }
 
-    private static double volume(double radius) {
-        return 4 * Math.PI * Math.pow(radius, 3) / 3;
-    }
-
-    private static double circumference(double radius) {
-        return Math.PI * radius * 2;
-    }
+  
 }
