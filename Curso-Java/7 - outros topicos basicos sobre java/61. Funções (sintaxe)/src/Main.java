@@ -1,69 +1,42 @@
-import java.util.Locale;
 import java.util.Scanner;
-
-//import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
 
-     //   %f = ponto flutuante
-     //   %d = inteiro
-     //   %s = texto
-     //   %n = quebra de linha
+        // funções representam um processamento que possui um significado
 
-      String nome = "Maria";
-      int idade = 31;
-      double renda = 4000.0;
-      System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda);
+        // principais vantagens: moduralização, delegação e reaproveitamento
 
-      Scanner sc = new Scanner(System.in);
-      String s1, s2, s3;
-      s1 = sc.nextLine();
-      s2 = sc.nextLine();
-      s3 = sc.nextLine();
-      System.out.println("DADOS DIGITADOS:");
-      System.out.println(s1);
-      System.out.println(s2);
-      System.out.println(s3);
-      sc.close();
+        double x = Math.sqrt(25); // recebe paremetro retorna double
 
-      var util = new Util();
-
-       util.setAltura(15);
-       util.setBaseA(15);
-       util.setBaseB(15);
-
-        System.out.printf("Calculo Aárea %f", util.CalculoAreaTrapezio());
-
-
-        Locale.setDefault(Locale.US);
+        System.out.println(x); // recebe parametro e não retorna só imprime na tela
 
         Scanner scanner = new Scanner(System.in);
 
-        double x;
+        System.out.println("Enter three numbers: ");
 
-        x = scanner.nextDouble();
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
 
-        System.out.printf("Você digitou: %.2f%n", x);
+        showResult( MajorThreeNumbers(a, b, c));
 
-        char _char;
+        scanner.close();
+    }
 
-        _char = scanner.next().charAt(0);
+    public static int MajorThreeNumbers(int a, int b, int c) {
+        int aux;
+        if (a > b && a > c)
+            aux = a;
+        if (b > c)
+            aux = b;
+        else
+            aux = c;
 
-        System.out.println("Você digitou: " + _char);
+        return aux;
+    }
 
-
-        // para ler varios dados na mesma linha utulizar 
-
-
-       String a;
-       int b;
-       double c;
-
-       a = scanner.next();
-       b = scanner.nextInt();
-       c = scanner.nextDouble();
-
-
+    public static void showResult(int value){
+        System.out.println("Higher = " + value);
     }
 }
