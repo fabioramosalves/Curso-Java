@@ -1,0 +1,1 @@
+Exercicio feito no seção 71
