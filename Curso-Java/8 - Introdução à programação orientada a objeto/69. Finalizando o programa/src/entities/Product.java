@@ -14,12 +14,10 @@ public class Product {
         this.quantity += quantity;
     }
 
-    public void removeProducts(int quantity) throws Exception {
+    public void removeProducts(int quantity) {
 
         if (this.quantity > 0)
-            this.quantity -= quantity;
-        else
-            throw new Exception("not found product in stock!");
+            this.quantity -= quantity;            
     }
 
     public String toString() {
